@@ -88,6 +88,7 @@ export const readAllEvent = async (req, res, next) => {
 export const deleteEvent = async (req, res, next) => {
   try {
     const { _id } = req.body;
+    console.log('controller id', _id);
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
